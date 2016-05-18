@@ -16,12 +16,12 @@ namespace System.ComponentModel {
         #region INotify Implementation
         /// <summary>Calls the PropertyChanged event.</summary>
         /// <param name="property">Name of the property that changed.</param>
-        private void OnPropertyChanged([CallerMemberName] string property = null) =>
+        protected void OnPropertyChanged([CallerMemberName] string property = null) =>
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(property));
 
         /// <summary>Calls the PropertyChanging event.</summary>
         /// <param name="property">Name of the property that is changing.</param>
-        private void OnPropertyChanging([CallerMemberName] string property = null) =>
+        protected void OnPropertyChanging([CallerMemberName] string property = null) =>
             PropertyChanging?.Invoke(this, new PropertyChangingEventArgs(property));
         #endregion
     }

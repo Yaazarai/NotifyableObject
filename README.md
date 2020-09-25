@@ -19,7 +19,7 @@ namespace MyApplication {
     public class MainWindowViewModel : NotifyableObject {}
 }
 ```
-The notifyable object class uses CompilerServices to get `CallerMemberName` so that when you call `OnPropertychanged` you won't have to manually type out the property name strin, fancy:
+The notifyable object class uses CompilerServices to get `CallerMemberName` so that when you call `OnPropertychanged` you won't have to manually type out the property name string, fancy:
 ```C#
 using System.ComponentModel;
 namespace MyApplication {
